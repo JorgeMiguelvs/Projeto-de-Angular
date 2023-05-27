@@ -1,0 +1,33 @@
+
+<mat-label><h2>Jogos Cadastrados</h2></mat-label>
+<ul>
+  <li mat-list-item *ngFor="let jogo of listaJogos">
+    <span (click)="selecionar(jogo)">{{jogo.nome}}</span>
+    <span style="cursor: pointer" (click)="avaliar()"></span>
+  </li>
+</ul>
+
+<mat-label><h2>Avaliação Feitas</h2></mat-label>
+<ul>
+    <li mat-list-item *ngFor="let jogo of listaJogos">
+      <span (click)="selecionar(jogo)">{{jogo.nome}} - {{jogo.avaliar}}</span>
+      <span style="cursor: pointer" (click)="avaliar()"></span>
+    </li>
+</ul>
+
+
+<mat-label><h2>Cadastrar Nova Avaliação</h2></mat-label>
+<br>
+
+<mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" [(ngModel)]="jogo.nome">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+    <mat-label>Escreva Sua Avaliação</mat-label>
+    <input matInput type="text" [(ngModel)]="jogo.avaliar">
+</mat-form-field>
+<br>
+<button mat-flat-button (click)="salvar()">Salvar</button>

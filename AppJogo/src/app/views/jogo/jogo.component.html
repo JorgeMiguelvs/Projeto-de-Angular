@@ -1,0 +1,49 @@
+<mat-label><h2>Jogos Cadastrados</h2></mat-label>
+<ul>
+  <li mat-list-item *ngFor="let jogo of listaJogos">
+    <span (click)="selecionar(jogo)">{{jogo.nome}}</span>
+    <span style="cursor: pointer" (click)="remover(jogo.id)"><mat-icon>close</mat-icon></span>
+  </li>
+</ul>
+
+<mat-label><h2>Cadastrar Novo Jogo</h2></mat-label>
+<br>
+<mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" [(ngModel)]="jogo.nome">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+  <mat-label>Código</mat-label>
+<input matInput type="text" [(ngModel)]="jogo.codigo">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+<mat-label>Gênero</mat-label>
+<input matInput type="text" [(ngModel)]="jogo.genero">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+<mat-label>Preço</mat-label>
+<input matInput type="text" [(ngModel)]="jogo.preco">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+<mat-label>Plataforma</mat-label>
+<input matInput type="text" [(ngModel)]="jogo.plataforma">
+</mat-form-field>
+<br>
+
+<mat-form-field>
+<mat-label>Descrição</mat-label>
+<input matInput type="text" [(ngModel)]="jogo.descricao">
+</mat-form-field>
+<br>
+<button mat-flat-button (click)="salvar()">Salvar</button>
+<button mat-flat-button (click)="cancelar()">Cancelar</button>
+
+
