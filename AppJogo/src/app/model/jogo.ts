@@ -1,11 +1,11 @@
 export class jogo{
-
-  nome='';
+  id_jogo=0;
+  nome_jogo='';
   codigo = '';
-  genero='';
   preco = '';
   plataforma='';
   descricao='';
-  avaliar='';
-  id=0;
+  id_avaliar=0;
+  id_categoria=0;
+  
 }

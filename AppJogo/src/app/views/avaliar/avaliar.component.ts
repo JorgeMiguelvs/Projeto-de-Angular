@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import { jogo } from 'src/app/model/jogo';
-import { JogoService } from 'src/app/service/jogo.service';
+import { avaliar } from 'src/app/model/avaliar';
+import { AvaliarService } from 'src/app/service/avaliar.service';
 
 @Component({
   selector: 'app-avaliar',
@@ -9,20 +9,20 @@ import { JogoService } from 'src/app/service/jogo.service';
 })
 export class AvaliarComponent implements OnInit {
 
-  listaAvaliar:jogo[]=[];
-  listaJogos: jogo[] = [];
-  jogo = new jogo();
+  listaAvaliar:avaliar[]=[];
+  listaavaliars: avaliar[] = [];
+  avaliarJogo = new avaliar();
   estaAvaliando = false;
 
-  constructor(private jogoService:JogoService){}
+  constructor(private avaliarService:AvaliarService){}
 
   ngOnInit(): void {
     this.listar();
   }
 
 listar(){
-  this.jogoService.listar().subscribe(jogos=>{
-    this.listaJogos = jogos;
+  this.avaliarService.listar().subscribe(avaliars=>{
+    this.listaavaliars = avaliars;
   });
 }
 
@@ -30,13 +30,13 @@ listarAvaliar(){
 
 }
 
-selecionar(jogo:jogo){
-  this.jogo = jogo;
+selecionar(avaliar:avaliar){
+  this.avaliarJogo = avaliar;
   this.estaAvaliando=true;
   }
 
   remover(id:number){
-    this.jogoService.apagar(id).subscribe(()=>{
+    this.avaliarService.apagar(id).subscribe(()=>{
     this.listar();
       });
     }
@@ -44,7 +44,7 @@ selecionar(jogo:jogo){
    
 
     avaliar(){
-      this.jogoService.avaliar(this.jogo).subscribe(jogos=>{
+      this.avaliarService.inserir(this.avaliarJogo).subscribe(avaliars=>{
         this.listarAvaliar();
       });
     }
@@ -59,7 +59,7 @@ selecionar(jogo:jogo){
     }
 
     atualizarAvaliar(){
-      this.jogoService.atualizar(this.jogo).subscribe(()=>{
+      this.avaliarService.atualizar(this.avaliarJogo).subscribe(()=>{
         this.listar();
       });
     }

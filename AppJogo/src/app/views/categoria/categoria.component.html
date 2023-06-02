@@ -1,0 +1,15 @@
+<mat-label><h2>Cadastrar Categoria</h2></mat-label>
+
+<mat-form-field>
+    <mat-label>Categoria</mat-label>
+    <input matInput type="text" [(ngModel)]="jogo.categoria">
+</mat-form-field>
+<br>
+<button mat-flat-button (click)="salvar()">Salvar</button>
+
+
+<ul>
+    <li mat-list-item *ngFor="let jogo of listaCategorias">
+      <span>{{jogo.categoria}}</span>
+    </li>
+  </ul>

@@ -14,13 +14,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { AvaliarComponent } from './views/avaliar/avaliar.component';
+import { CategoriaComponent } from './views/categoria/categoria.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     JogoComponent,
-    AvaliarComponent
+    AvaliarComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

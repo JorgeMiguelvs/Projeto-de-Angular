@@ -1,34 +1,50 @@
 {
   "jogo": [
     {
-      "nome": "Fortnite",
+      "nome_jogo": "Fortnite",
       "codigo": "78578",
       "genero": "tiro",
       "preco": "100",
       "plataforma": "PC",
       "descricao": "jogo de tiro",
-      "id": 2,
-      "avaliar": "Bom jogo porém não gostei do design"
+      "id": 1,
+      "avaliar": "gostei do design"
     },
     {
-      "nome": "GTA V",
-      "codigo": "6554",
-      "genero": "tiro",
-      "preco": "111",
-      "plataforma": "ps4",
-      "descricao": "teste",
-      "avaliar": "Jogo muito violento, gostei",
-      "id": 3
-    },
-    {
-      "nome": "Fifa",
+      "nome_jogo": "Fifa",
       "codigo": "87",
       "genero": "Arcade",
       "preco": "89",
       "plataforma": "PS4",
       "descricao": "JOGO",
       "avaliar": "Cade o SPFC lá???",
-      "id": 4
+      "id": 2
+    },
+    {
+      "nome_jogo": "Pes",
+      "codigo": "123",
+      "genero": "Futebol",
+      "preco": "110",
+      "plataforma": "PS4",
+      "descricao": "jogo de futebol",
+      "avaliar": "zxlkjzdnvpçsdvb sd",
+      "id": 3
+    }
+  ],
+
+  "avaliar": [
+    {
+      "id_avaliar": 0,
+      "avaliar": ""
+      
+    }
+  ],
+  "categoria": [
+    {
+      "id_categoria": 0,
+      "nome": ""
+  
     }
   ]
 }
+
