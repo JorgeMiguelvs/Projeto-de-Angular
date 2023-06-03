@@ -1,34 +1,22 @@
 {
-  "jogo": [
+  "jogo": [{
+    "id":1,
+    "nome":"teste",
+    "id_categoria":1,
+    "preco":50,
+    "id_avaliacao":0,
+    "plataforma":"PS4",
+    "descricao":"teste"
+
+
+
+
+
+}],
+  "categoria": [
     {
-      "nome": "Fortnite",
-      "codigo": "78578",
-      "genero": "tiro",
-      "preco": "100",
-      "plataforma": "PC",
-      "descricao": "jogo de tiro",
-      "id": 2,
-      "avaliar": "Bom jogo porém não gostei do design"
-    },
-    {
-      "nome": "GTA V",
-      "codigo": "6554",
-      "genero": "tiro",
-      "preco": "111",
-      "plataforma": "ps4",
-      "descricao": "teste",
-      "avaliar": "Jogo muito violento, gostei",
-      "id": 3
-    },
-    {
-      "nome": "Fifa",
-      "codigo": "87",
-      "genero": "Arcade",
-      "preco": "89",
-      "plataforma": "PS4",
-      "descricao": "JOGO",
-      "avaliar": "Cade o SPFC lá???",
-      "id": 4
+      "id": 1,
+      "nome": "teste5"
     }
   ]
 }

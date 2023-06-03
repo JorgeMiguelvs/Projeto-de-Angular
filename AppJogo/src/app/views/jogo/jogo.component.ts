@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { categoria } from 'src/app/model/categoria';
 import { jogo } from 'src/app/model/jogo';
 import { JogoService } from 'src/app/service/jogo.service';
 
@@ -9,7 +10,11 @@ import { JogoService } from 'src/app/service/jogo.service';
 })
 export class JogoComponent  implements OnInit{
 
-  listaJogos: jogo[] = [];
+  selected:any;
+  filtered :any;
+categoria= new categoria();
+categorias: categoria[] = [];
+listaJogos: jogo[] = [];
   jogo = new jogo();
   estaEditando = false;
 
@@ -46,7 +51,7 @@ atualizar(){
 salvar(){
   if(this.estaEditando){
     this.atualizar();
-  } 
+  }
   else{
     this.inserir();
   }
@@ -62,5 +67,9 @@ cancelar(){
   this.jogo = new jogo();
 }
 
+onOptionsSelected() {
+  console.log(this.selected);
+  this.filtered = this.listaJogos.filter(t=>t.nome ==this.selected);
 
+}
 }

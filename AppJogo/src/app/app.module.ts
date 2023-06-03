@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { AvaliarComponent } from './views/avaliar/avaliar.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AvaliarComponent } from './views/avaliar/avaliar.component';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
