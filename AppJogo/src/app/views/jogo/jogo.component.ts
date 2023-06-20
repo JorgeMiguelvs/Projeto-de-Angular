@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
+import { categoria } from 'src/app/model/categoria';
 import { jogo } from 'src/app/model/jogo';
+import { CategoriaService } from 'src/app/service/categoria.service';
 import { JogoService } from 'src/app/service/jogo.service';
 
 @Component({
@@ -9,19 +11,32 @@ import { JogoService } from 'src/app/service/jogo.service';
 })
 export class JogoComponent  implements OnInit{
 
-  listaJogos: jogo[] = [];
+  selected:any;
+  filtered :any;
+
+categorias: categoria[] = [];
+listaJogos: jogo[] = [];
   jogo = new jogo();
   estaEditando = false;
 
-  constructor(private jogoService:JogoService){}
+  constructor(private jogoService:JogoService,private categoriaService:CategoriaService){}
+
+
 
   ngOnInit(): void {
     this.listar();
+    this.listarCategorias();
   }
 
 listar(){
   this.jogoService.listar().subscribe(jogos=>{
     this.listaJogos = jogos;
+  });
+}
+
+listarCategorias(){
+  this.categoriaService.listar().subscribe(categorias=>{
+    this.categorias = categorias;
   });
 }
 
@@ -46,7 +61,7 @@ atualizar(){
 salvar(){
   if(this.estaEditando){
     this.atualizar();
-  } 
+  }
   else{
     this.inserir();
   }

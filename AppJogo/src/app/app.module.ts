@@ -14,7 +14,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { AvaliarComponent } from './views/avaliar/avaliar.component';
+import {MatSelectModule} from '@angular/material/select';
 import { CategoriaComponent } from './views/categoria/categoria.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { CategoriaComponent } from './views/categoria/categoria.component';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

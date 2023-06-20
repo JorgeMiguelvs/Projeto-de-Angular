@@ -1,5 +1,5 @@
 export class avaliar{
 
-    id_avaliar=0;
-    avaliar='';
+  id_avaliar=0;
+  avaliar='';
 }

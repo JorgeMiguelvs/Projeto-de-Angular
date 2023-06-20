@@ -1,50 +1,64 @@
 {
   "jogo": [
     {
-      "nome_jogo": "Fortnite",
-      "codigo": "78578",
-      "genero": "tiro",
-      "preco": "100",
-      "plataforma": "PC",
-      "descricao": "jogo de tiro",
-      "id": 1,
-      "avaliar": "gostei do design"
-    },
-    {
-      "nome_jogo": "Fifa",
-      "codigo": "87",
-      "genero": "Arcade",
-      "preco": "89",
-      "plataforma": "PS4",
-      "descricao": "JOGO",
-      "avaliar": "Cade o SPFC lá???",
+      "nome": "teste ",
+      "codigo": "545",
+      "genero": "hjhjh",
+      "preco": 2,
+      "categoria_id": 0,
+      "descricao": "kmjkj",
+      "avaliar": "",
       "id": 2
     },
     {
-      "nome_jogo": "Pes",
-      "codigo": "123",
-      "genero": "Futebol",
-      "preco": "110",
-      "plataforma": "PS4",
-      "descricao": "jogo de futebol",
-      "avaliar": "zxlkjzdnvpçsdvb sd",
+      "nome": "ghhgh",
+      "codigo": "jhjh",
+      "genero": "hjhhj",
+      "preco": 1.3,
+      "categoria_id": 0,
+      "descricao": "xxxczxc",
+      "avaliar": "",
       "id": 3
-    }
-  ],
-
-  "avaliar": [
+    },
     {
-      "id_avaliar": 0,
-      "avaliar": ""
-      
+      "nome": "teste ",
+      "codigo": "545",
+      "genero": "hjhjh",
+      "preco": 2,
+      "categoria_id": 0,
+      "descricao": "kmjkj",
+      "avaliar": "",
+      "id": 4
+    },
+    {
+      "nome": "teste ",
+      "codigo": "545",
+      "genero": "hjhjh",
+      "preco": 2,
+      "categoria_id": 0,
+      "descricao": "kmjkj",
+      "avaliar": "",
+      "id": 5
+    },
+    {
+      "nome": "jhbjkh",
+      "codigo": "",
+      "genero": "",
+      "preco": 0,
+      "categoria_id": 0,
+      "descricao": "",
+      "avaliar": "hjhjh",
+      "id": 6
     }
   ],
   "categoria": [
     {
-      "id_categoria": 0,
-      "nome": ""
-  
+      "id": 1,
+      "nome": "teste5"
+    },
+    {
+      "nome": "teste",
+      "id": 2
     }
   ]
 }
-

@@ -9,19 +9,19 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 })
 export class CategoriaComponent {
 
-  categoria = new categoria();
+  categoria= new categoria();
+  categorias: categoria[] = [];
   estaEditando = false;
-  listaCategorias: categoria[] = [];
+   selected:any;
+  filtered :any;
 
-  constructor(private categoriaService:CategoriaService){}
+  constructor(private categoriaService:CategoriaService  ){}
 
-  salvar(){
-    if(this.estaEditando){
-      this.atualizar();
-    } 
-    else{
-      this.inserir();
-    }
+
+  listar(){
+    this.categoriaService.listar().subscribe(categorias=>{
+      this.categorias = categorias;
+    });
   }
 
   inserir(){
@@ -30,18 +30,42 @@ export class CategoriaComponent {
     });
   }
 
-  atualizar(){
-    this.categoriaService.atualizar(this.categoria).subscribe(()=>{
-      this.listar();
-    });
-  }
-  
-  listar(){
-    this.categoriaService.listar().subscribe(categorias=>{
-      this.listaCategorias = categorias;
-    });
-  }
+  remover(id:number){
+    this.categoriaService.apagar(id).subscribe(()=>{
+    this.listar();
+      });
+    }
+
+    atualizar(){
+      this.categoriaService.atualizar(this.categoria).subscribe(()=>{
+        this.listar();
+      });
+    }
 
 
-  
+    salvar(){
+      if(this.estaEditando){
+        this.atualizar();
+      }
+      else{
+        this.inserir();
+      }
+    }
+
+    selecionar(categoria:categoria){
+    this.categoria = categoria;
+    this.estaEditando=true;
+    }
+
+    cancelar(){
+      this.estaEditando=false;
+      this.categoria = new categoria();
+    }
+
+    onOptionsSelected() {
+      console.log(this.selected);
+      this.filtered = this.categorias.filter(t=>t.nome ==this.selected);
+
+    }
+
 }

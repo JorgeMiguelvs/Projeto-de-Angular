@@ -20,11 +20,6 @@
 </mat-form-field>
 <br>
 
-<mat-form-field>
-<mat-label>Gênero</mat-label>
-<input matInput type="text" [(ngModel)]="jogo.categoria">
-</mat-form-field>
-<br>
 
 <mat-form-field>
 <mat-label>Preço</mat-label>
@@ -32,11 +27,19 @@
 </mat-form-field>
 <br>
 
-<mat-form-field>
-<mat-label>Plataforma</mat-label>
-<input matInput type="text" [(ngModel)]="jogo.plataforma">
-</mat-form-field>
+
+
+<span></span>
+  <label>Categoria</label>
+  <select  name="status" placeholder="select"  >
+
+    <option *ngFor="let categoria of categorias"  [(ngModel)]="jogo.id_categoria" [value]="categoria.id">{{categoria.nome}}</option>
+
+  </select>
 <br>
+
+
+
 
 <mat-form-field>
 <mat-label>Descrição</mat-label>

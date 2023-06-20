@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { avaliar } from 'src/app/model/avaliar';
+import { jogo } from 'src/app/model/jogo';
 import { AvaliarService } from 'src/app/service/avaliar.service';
+import { JogoService } from 'src/app/service/jogo.service';
 
 @Component({
   selector: 'app-avaliar',
@@ -13,16 +15,23 @@ export class AvaliarComponent implements OnInit {
   listaavaliars: avaliar[] = [];
   avaliarJogo = new avaliar();
   estaAvaliando = false;
+  listaJogos: jogo[] = [];
 
-  constructor(private avaliarService:AvaliarService){}
+  constructor(private avaliarService:AvaliarService, private jogoService:JogoService){}
 
   ngOnInit(): void {
     this.listar();
+    this.listarJogo();
   }
 
 listar(){
   this.avaliarService.listar().subscribe(avaliars=>{
     this.listaavaliars = avaliars;
+  });
+}
+listarJogo(){
+  this.jogoService.listar().subscribe(jogos=>{
+    this.listaJogos = jogos;
   });
 }
 
@@ -41,7 +50,7 @@ selecionar(avaliar:avaliar){
       });
     }
 
-   
+
 
     avaliar(){
       this.avaliarService.inserir(this.avaliarJogo).subscribe(avaliars=>{
@@ -52,7 +61,7 @@ selecionar(avaliar:avaliar){
     salvar(){
       if(this.estaAvaliando){
         this.atualizarAvaliar();
-      } 
+      }
       else{
         this.avaliar();
       }

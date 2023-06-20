@@ -1,15 +1,15 @@
-<mat-label><h2>Cadastrar Categoria</h2></mat-label>
+<mat-label><h2>Categorias Cadastrados</h2></mat-label>
+<ul>
+  <li mat-list-item *ngFor="let categoria of categorias">
+    <span (click)="selecionar(categoria)">{{categoria.nome}}</span>
+    <span style="cursor: pointer" (click)="remover(categoria.id)"><mat-icon>close</mat-icon></span>
+  </li>
+</ul>
 
+<mat-label><h2>Cadastrar categoria</h2></mat-label>
+<br>
 <mat-form-field>
-    <mat-label>Categoria</mat-label>
-    <input matInput type="text" [(ngModel)]="jogo.categoria">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" [(ngModel)]="categoria.nome">
 </mat-form-field>
 <br>
-<button mat-flat-button (click)="salvar()">Salvar</button>
-
-
-<ul>
-    <li mat-list-item *ngFor="let jogo of listaCategorias">
-      <span>{{jogo.categoria}}</span>
-    </li>
-  </ul>
