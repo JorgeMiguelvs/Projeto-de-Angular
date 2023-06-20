@@ -19,7 +19,7 @@ export class CategoriaService {
     }
 
    atualizar(categoria:categoria):Observable<categoria>{
-    return this.http.put<categoria>(`http://localhost:3000/categoria/${categoria.id_categoria}`,categoria);
+    return this.http.put<categoria>(`http://localhost:3000/categoria/${categoria.id}`,categoria);
    }
 
    apagar(id:number):Observable<any>{

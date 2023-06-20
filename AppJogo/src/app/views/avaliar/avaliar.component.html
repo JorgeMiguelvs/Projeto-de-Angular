@@ -2,7 +2,7 @@
 <mat-label><h2>Jogos Cadastrados</h2></mat-label>
 <ul>
   <li mat-list-item *ngFor="let jogo of listaJogos">
-    <span (click)="selecionar(jogo)">{{jogo.nome}}</span>
+    <span >{{jogo.nome}}</span>
     <span style="cursor: pointer" (click)="avaliar()"><mat-icon>star</mat-icon></span>
   </li>
 </ul>
@@ -10,7 +10,7 @@
 <mat-label><h2>Avaliação Feitas</h2></mat-label>
 <ul>
     <li mat-list-item *ngFor="let jogo of listaJogos">
-      <span (click)="selecionar(jogo)">{{jogo.nome}} - {{jogo.avaliar}}</span>
+      <span>{{jogo.nome}} - {{jogo.avaliar}}</span>
       <span style="cursor: pointer" (click)="avaliar()"></span>
     </li>
 </ul>

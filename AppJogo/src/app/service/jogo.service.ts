@@ -19,12 +19,12 @@ export class JogoService {
     }
 
    atualizar(jogo:jogo):Observable<jogo>{
-    return this.http.put<jogo>(`http://localhost:3000/jogo/${jogo.id_jogo}`,jogo);
+    return this.http.put<jogo>(`http://localhost:3000/jogo/${jogo.id}`,jogo);
    }
 
    apagar(id:number):Observable<any>{
     return this.http.delete(`http://localhost:3000/jogo/${id}`);
   }
 
- 
+
 }

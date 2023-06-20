@@ -15,9 +15,9 @@ export class AvaliarComponent implements OnInit {
   listaavaliars: avaliar[] = [];
   avaliarJogo = new avaliar();
   estaAvaliando = false;
-  listaJogos: jogo[] = [];
-
-  constructor(private avaliarService:AvaliarService, private jogoService:JogoService){}
+jogo: any;
+  listaJogos : jogo[]=[];
+  constructor(private avaliarService:AvaliarService,private jogoService:JogoService){}
 
   ngOnInit(): void {
     this.listar();
