@@ -6,6 +6,6 @@ export class jogo{
   plataforma='';
   descricao='';
   avaliar=0;
-  id_categoria=0;
+  id_categoria='';
 
 }

@@ -1,7 +1,7 @@
 <mat-label><h2>Jogos Cadastrados</h2></mat-label>
 <ul>
   <li mat-list-item *ngFor="let jogo of listaJogos">
-    <span (click)="selecionar(jogo)">{{jogo.nome}}</span>
+    <span (click)="selecionar(jogo)">{{jogo.nome}} - R${{jogo.preco}}- {{jogo.descricao}}-{{jogo.id_categoria}}-{{jogo.plataforma}}</span>
     <span style="cursor: pointer" (click)="remover(jogo.id)"><mat-icon>close</mat-icon></span>
   </li>
 </ul>
@@ -14,31 +14,38 @@
 </mat-form-field>
 <br>
 
-<mat-form-field>
-  <mat-label>Código</mat-label>
-<input matInput type="text" [(ngModel)]="jogo.codigo">
-</mat-form-field>
-<br>
-
 
 <mat-form-field>
 <mat-label>Preço</mat-label>
-<input matInput type="text" [(ngModel)]="jogo.preco">
+<input matInput type="number" min="1"  [(ngModel)]="jogo.preco">
 </mat-form-field>
 <br>
 
 
 
-<span></span>
   <label>Categoria</label>
-  <select  name="status" placeholder="select"  >
+  <br>
+  <select name="status" placeholder="Selecione uma categoria" [(ngModel)]="jogo.id_categoria" >
 
-    <option *ngFor="let categoria of categorias"  [(ngModel)]="jogo.id_categoria" [value]="categoria.id">{{categoria.nome}}</option>
+    <option  *ngFor="let categoria of categorias">{{categoria.nome}}</option>
 
   </select>
 <br>
+<br>
 
+<label>Plataforma</label>
+<br>
+<select name="status" placeholder="Selecione a plataforma" [(ngModel)]="jogo.plataforma" >
 
+  <option >PS4</option>
+  <option >PS5</option>
+  <option >PS4/PS5</option>
+  <option >Nintendo</option>
+  <option >Xbox</option>
+  <option >Todos</option>
+</select>
+<br>
+<br>
 
 
 <mat-form-field>
